@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<robot name="main">
+
+
+  <link name="palm">
+    <visual>
+      <geometry>
+        <box size="0.08 0.02 0.1"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+  <link name="first_finger">
+    <visual>
+      <geometry>
+         <cylinder length="0.03" radius="0.01"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.0150"/>
+    </visual>
+  </link>
+
+  <link name="first_middle">
+    <visual>
+      <geometry>
+         <cylinder length="0.03" radius="0.01"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+ <joint name="palm_to_first" type="fixed">
+  <parent link ="palm"/>
+  <child link = "first_finger"/>
+  <origin rpy="0 0 0" xyz="0.03 0 0.05"/>
+ </joint>
+
+ <joint name="first_to_first_middle" type="fixed">
+  <parent link ="first_finger"/>
+  <child link = "first_middle"/>
+  <origin rpy="0 0 0" xyz="0 0 0.03"/>
+ </joint>
+
+<!-- 
+  <link name="arm">
+    <visual>
+      <geometry>
+        <cylinder length="0.6" radius="0.2"/>
+      </geometry>
+    </visual>
+  </link>
+ <link name="thumb">
+    <visual>
+      <geometry>
+         <cylinder length="0.6" radius="0.2"/>
+      </geometry>
+      <origin rpy="0 1.57075 0" xyz="0 0 0.2"/>
+    </visual>
+  </link>
+ <joint name="thumb_to_palm" type="fixed">
+  <parent link ="palm"/>
+  <child link = "thumb"/>
+ </joint>
+
+ <link name="first_finger">
+    <visual>
+      <geometry>
+         <cylinder length="0.6" radius="0.2"/>
+      </geometry>
+      <origin rpy="0 1.57075 0" xyz="0 0 0.2"/>
+    </visual>
+  </link>
+ <joint name="first_finger_to_palm" type="fixed">
+  <parent link ="palm"/>
+  <child link = "first_finger"/>
+ </joint>
+
+  <link name="middle_finger">
+    <visual>
+      <geometry>
+         <cylinder length="0.6" radius="0.2"/>
+      </geometry>
+      <origin rpy="0 1.57075 0" xyz="0 0 0.2"/>
+    </visual>
+  </link>
+ <joint name="middle_finger_to_palm" type="fixed">
+  <parent link ="palm"/>
+  <child link = "middle_finger"/>
+ </joint>
+
+ <link name="finger_4">
+    <visual>
+      <geometry>
+         <cylinder length="0.6" radius="0.2"/>
+      </geometry>
+      <origin rpy="0 1.57075 0" xyz="0 0 0.2"/>
+    </visual>
+  </link>
+ <joint name="finger_4_to_palm" type="fixed">
+  <parent link ="palm"/>
+  <child link = "finger_4"/>
+ </joint>
+
+<link name="pinky">
+    <visual>
+      <geometry>
+         <cylinder length="0.6" radius="0.2"/>
+      </geometry>
+      <origin rpy="0 1.57075 0" xyz="0 0 0.2"/>
+    </visual>
+  </link>
+ <joint name="pinky_to_palm" type="fixed">
+  <parent link ="palm"/>
+  <child link = "pinky"/>
+ </joint>-->
+
+</robot>
+
+
